@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:show_buffering="when_playing"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player_view"
+        android:orientation="horizontal">
+
+
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/downloads_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:layout_weight="1"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:enabled="true"
+            android:layout_margin="25dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/cardview_dark_background"
+            fancy:fb_focusColor="@color/cardview_shadow_start_color"
+            fancy:fb_fontIconResource="\uf07c"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="VIEW FILES"
+            fancy:fb_textColor="#FFFFFF" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/videoSave_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:enabled="true"
+            android:layout_below="@id/player_view"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="25dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/cardview_dark_background"
+            fancy:fb_focusColor="@color/cardview_shadow_start_color"
+            fancy:fb_fontIconResource="\uf019"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Download"
+            fancy:fb_textColor="#FFFFFF" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/videoadView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1278927663267942/5908110953">
+    </com.google.android.gms.ads.AdView>
+
+
+
+
+</RelativeLayout>
